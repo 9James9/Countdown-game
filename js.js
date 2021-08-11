@@ -33,7 +33,13 @@ down10.addEventListener('click', () => {
     num -= 10
     timer.innerHTML = num
 })
-
+let up10 = document.createElement('button')
+up10.textContent = "Count up 10"
+container.appendChild(up10)
+up10.addEventListener('click', () => {
+    num += 10
+    timer.innerHTML = num
+})
 btnUp.addEventListener('click', () => {
     num += 1
     timer.innerHTML = num
