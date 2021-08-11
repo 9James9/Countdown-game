@@ -1,0 +1,18 @@
+.resetbtn {
+    background-color: red;
+}
+.leveltwo {
+    background-color: lightblue;
+}
+.leveltwo:hover {
+    color: green;
+}
+#containersContainer {
+    text-align: center;
+    border: 5px solid black;
+    padding-bottom: 50px;
+    height: 250px;
+}
+.monkas {
+    color: red;
+}
