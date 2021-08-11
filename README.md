@@ -1,0 +1,1 @@
+This is a small project I made for fun to practice DOM manipulation. It's sort of a game where you have to type in the number displayed right as it is shown, and each level makes the timer go faster. You can also add or subtract from the timer with the other buttons or play with the random 100 button to see if you are lucky or not!
