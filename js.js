@@ -1,5 +1,3 @@
-//game in progress -- end goal is for you to type in the number exactly as it appears and then move on to a harder difficulty. When timer hits 0 your score is the highest level you could achieve.
-
 let container = document.querySelector("#container")
 
 let timer = document.createElement('h2')
@@ -16,7 +14,6 @@ function countDown() {
         timer.classList.remove('monkas')
     }
 }
-
 
 let btn = document.createElement('button')
 container.appendChild(btn)
@@ -90,8 +87,6 @@ container.appendChild(reset)
 reset.addEventListener('click', () => {
     window.location.reload()
 })
-
-
 
 //add or subtract random number between 1 and 100
 let random100 = document.createElement('button')
