@@ -6,14 +6,15 @@ let timer = document.createElement('h2')
 container.appendChild(timer)
 timer.innerHTML = "x"
 let num = 100
-function countDown () {
-   num -= 1
-   timer.innerHTML = num
-   if (num < 0) {
-       timer.classList.add('monkas') //turn timer red when negative
-   } else if (num > 0) {
-       timer.classList.remove('monkas')
-   }
+
+function countDown() {
+    num -= 1
+    timer.innerHTML = num
+    if (num < 0) {
+        timer.classList.add('monkas') //turn timer red when negative
+    } else if (num > 0) {
+        timer.classList.remove('monkas')
+    }
 }
 
 
@@ -22,7 +23,7 @@ container.appendChild(btn)
 btn.textContent = "Count down"
 btn.addEventListener('click', countDown)
 
-setInterval(countDown,1000)
+setInterval(countDown, 1000)
 
 let btnUp = document.createElement('button')
 container.appendChild(btnUp)
@@ -37,23 +38,9 @@ down10.addEventListener('click', () => {
 })
 
 btnUp.addEventListener('click', () => {
-num += 1
-timer.innerHTML = num
+    num += 1
+    timer.innerHTML = num
 })
-
-/*
-
-let score = document.createElement('h3')
-container.appendChild(score)
-score.innerHTML = "hello"
-
-let scoreBtn = document.createElement('button')
-container.appendChild(scoreBtn)
-scoreBtn.textContent = "Calculate"
-scoreBtn.addEventListener('click', () => {
-   score.innerHTML = Math.floor(Math.random()*1000)
-})
-*/
 
 let guess = document.createElement('h4')
 container.appendChild(guess)
@@ -68,32 +55,32 @@ submit.addEventListener('click', () => {
     let value = document.querySelector('input').value
     if (value > num) {
         alert('The value is greater than the counter')
-        document.querySelector('input').value=''
-    }  else if (value == num) {
-            alert('You win! The value is equal to the counter')
-            document.querySelector('input').value=''
+        document.querySelector('input').value = ''
+    } else if (value == num) {
+        alert('You win! The value is equal to the counter')
+        document.querySelector('input').value = ''
     } else if (value < num) {
-            alert('The value is less than the counter')
-            document.querySelector('input').value=''
-    } 
-    else {console.log(value)
-        document.querySelector('input').value=''
+        alert('The value is less than the counter')
+        document.querySelector('input').value = ''
+    } else {
+        console.log(value)
+        document.querySelector('input').value = ''
     }
 })
 
- let levelTwo = document.createElement('button')
- levelTwo.textContent = "Level 2"
- levelTwo.classList.add('leveltwo')
- container.appendChild(levelTwo)
- levelTwo.addEventListener('click', () => {
-     setInterval(countDown,750)
- })
+let levelTwo = document.createElement('button')
+levelTwo.textContent = "Level 2"
+levelTwo.classList.add('leveltwo')
+container.appendChild(levelTwo)
+levelTwo.addEventListener('click', () => {
+    setInterval(countDown, 750)
+})
 
- let levelThree = document.createElement('button')
- levelThree.textContent = "Level 3"
- container.appendChild(levelThree)
+let levelThree = document.createElement('button')
+levelThree.textContent = "Level 3"
+container.appendChild(levelThree)
 levelThree.addEventListener('click', () => {
-    setInterval(countDown,250)
+    setInterval(countDown, 250)
 })
 
 let reset = document.createElement('button')
@@ -117,8 +104,8 @@ container.appendChild(random100Info)
 
 
 function random(number) {
- value = Math.floor(Math.random()*number)
-return value
+    value = Math.floor(Math.random() * number)
+    return value
 }
 //random100 will add or remove even/odd numbers. Adding/removing is based off of coin flip
 random100.addEventListener('click', () => {
@@ -132,4 +119,4 @@ random100.addEventListener('click', () => {
         num -= value
         random100Info.textContent = `The random number REMOVED was: ${value}`
     }
- })
+})
